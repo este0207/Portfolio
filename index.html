@@ -12,6 +12,17 @@
         <div class="logo">
             <img src="./images/logo.png" alt="">
         </div>
+        <button class="burger"><i class="fa-solid fa-bars"></i></button>
+        <div class="burger-menu">
+            <a href="#"><li>HOME</li></a>
+            <a href="#"><li>FEATURE</li></a>
+            <a href="#"><li>PROJETS</li></a>
+            <a href="#"><li>RESUME</li></a>
+            <a href="#"><li>CLIENTS</li></a>
+            <a href="#"><li>PRICING</li></a>
+            <a href="#"><li>BLOG</li></a>
+            <a href="#"><li>CONTACT</li></a>
+        </div>
         <nav>
             <a href="#"><li>HOME</li></a>
             <a href="#"><li>FEATURE</li></a>
@@ -141,6 +152,14 @@
         <img src="./images/logo-vertical.png" alt="">
         <p>© 2022. All rights reserved by Rainbow-Themes.</p>
     </footer>
-    
 </body>
+<script>
+    const burger = document.querySelector('.burger');
+    const burgerMenu = document.querySelector('.burger-menu');
+
+    burger.addEventListener('click', () => {
+        burgerMenu.classList.toggle('active');
+    });
+    burger.textContent = burgerMenu.classList.contains('active') ? 'x' : '+';
+</script>
 </html>
